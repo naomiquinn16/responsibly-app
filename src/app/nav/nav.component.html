@@ -1,9 +1,15 @@
 <div class="nav" >
+    <div class="nav__logo">
+        <h1>Responsibly</h1> 
+    </div>
     <mat-nav-list 
-        *ngFor="let menuItem of menuItems"
+        class="nav__list"
         role="menu"
-        aria-label="{{menuItem.text}}">
-        <a  mat-list-item
+        >
+        <a  
+            *ngFor="let menuItem of menuItems"
+            class="nav__list__item"
+            mat-list-item
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}"
             routerLink="{{menuItem.path}}"
