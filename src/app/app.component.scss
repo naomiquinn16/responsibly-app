@@ -13,14 +13,12 @@
 
     }
     &__main{
-        background-color: yellow;
         grid-area: main;
     }
     &__get-started{
         grid-area: get-started;
     }
     &__footer{
-        background-color: blue;
         grid-area: footer;
     }
 }
