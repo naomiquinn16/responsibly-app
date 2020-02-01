@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
 
-
+const appRoutes: Routes = [
+  {
+      loadChildren: './home/home.module#HomeModule',
+      path: ''
+  }
+];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+ 
+  ],
   imports: [
-    CommonModule
-  ]
+    QuicklinkModule,
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: QuicklinkStrategy })
+  ],
+  exports: [RouterModule]
 })
 
 

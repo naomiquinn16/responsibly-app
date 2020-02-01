@@ -1,0 +1,26 @@
+.app {
+    display: grid;
+    grid-template-areas:
+        'nav'
+        'main'
+        'get-started'
+        'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    height: 100vh;
+    &__navbar{
+        grid-area: nav;
+
+    }
+    &__main{
+        background-color: yellow;
+        grid-area: main;
+    }
+    &__get-started{
+        grid-area: get-started;
+    }
+    &__footer{
+        background-color: blue;
+        grid-area: footer;
+    }
+}

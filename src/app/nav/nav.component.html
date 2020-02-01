@@ -1,0 +1,14 @@
+<div class="nav" >
+    <mat-nav-list 
+        *ngFor="let menuItem of menuItems"
+        role="menu"
+        aria-label="{{menuItem.text}}">
+        <a  mat-list-item
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}"
+            routerLink="{{menuItem.path}}"
+        >
+          {{menuItem.text}}
+        </a>
+    </mat-nav-list>
+</div>
