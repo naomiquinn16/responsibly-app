@@ -1,22 +1,10 @@
-.blog{
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container{
-        width: 70%;
-        height:100vh;
-        &__detail{
-        align-items: center;
-        margin-top: 15%;
+        width: 80vw;
       
-        h1 {
-            font-size: 1.8rem
-        }
-        a {
-            text-decoration: none;
-            color: white;
-        }
-        &__subtitle{
-            color: #707070;
-            font-size: 1.3rem;
-        }
-        }
     }
+
 }
