@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatButtonModule } from '@angular/material/button';
 
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -33,6 +33,7 @@ import { MainComponent } from './main/main.component';
     ReactiveFormsModule,
     MatListModule,
     MatIconModule,
+    MatButtonModule
 
   ],
   providers: [],

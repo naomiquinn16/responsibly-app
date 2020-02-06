@@ -1,0 +1,29 @@
+@import '../../assets/scss/placeholders';
+@import '../../assets/scss/variables';
+
+.get-started {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        width: 75vw;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: map-get($colors, headings);
+        }
+        p{
+            color: map-get($colors, paragraphs);
+        }
+        button{
+            @extend %contact-button;
+            margin: 1rem 0 2rem;
+        }
+        &__divider{
+            @extend %divider;
+        }
+    }
+}

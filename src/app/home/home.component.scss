@@ -1,4 +1,5 @@
 @import '../../assets/scss/placeholders';
+@import '../../assets/scss/variables';
 
 .home {
     display: flex;
@@ -11,21 +12,18 @@
             &__box{
                 h1{
                     font-size: 3rem;
-                    color: #3F3D56;
+                    color: map-get($colors, headings);
                 }
                 button{
                     @extend %contact-button;
                 }
                 p{
                     line-height: 1.5rem;
+                    color: map-get($colors, paragraphs);
                 }
 
                 &__divider{
-                    background-color: #4285F4;
-                    height: 2px;
-                    width: 4rem;
-                    margin: 1rem 0;
-                    border: 1px #4285F4 solid;
+                   @extend %divider;
                 }
             }  
         }
