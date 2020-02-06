@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.router.module';
 import { AboutComponent } from '../about/about.component';
@@ -27,6 +27,7 @@ import { BlogComponent } from '../blog/blog.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,

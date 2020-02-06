@@ -1,19 +1,20 @@
 <div class="home">
-    <div class="home__container">
-     <section class="home__container__landing">
-        <div>
-            
+    <div fxLayout="column" class="home__container">
+     <section fxLayout="row" fxLayoutAlign="center center" class="home__container__landing">
+        <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="home__container__landing__box">
+            <h1>Cultivating an Artificial Intelligent Ecosystem that empowers teams to innovate responsibly. </h1>
+            <button mat-raised-button routerLink="/contact">Get in Touch</button>  
         </div>
-        <div>
-            <img src="../../assets/images/home-landing.png" alt="">
+        <div fxFlex="55%" fxLayoutAlign="center center">
+            <img width="90%" src="../../assets/images/home-landing.png" alt="">
         </div>
      </section>
-     <section class="home__container__knowledge">
-        <img src="../../assets/images/home-knowledge.png" alt="">
+     <section fxLayout="row" class="home__container__knowledge">
+        <!-- <img src="../../assets/images/home-knowledge.png" alt=""> -->
        
     </section>
-    <section class="home__container__integration">
-       <img src="../../assets/images/home-integ.png" alt="">
+    <section fxLayout="row" class="home__container__integration">
+       <!-- <img src="../../assets/images/home-integ.png" alt=""> -->
     </section>
     </div>
 </div>

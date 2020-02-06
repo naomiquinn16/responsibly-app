@@ -1,9 +1,22 @@
+@import '../../assets/scss/placeholders';
+
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
     &__container{
         width: 80vw;
+        &__landing{
+            height: 90vh;
+            &__box{
+                h1{
+                    font-size: 3rem;
+                }
+                button{
+                    @extend %contact-button;
+                }
+            }  
+        }
       
     }
 
