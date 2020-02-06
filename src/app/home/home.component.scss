@@ -9,6 +9,12 @@
         width: 75vw;
         &__landing{
             height: 100vh; 
+        }
+        &__knowledge, &__integration{
+            height: 80vh; 
+        }
+
+        &__landing, &__knowledge, &__integration{
             &__box{
                 h1{
                     font-size: 3rem;
@@ -25,7 +31,7 @@
                 &__divider{
                    @extend %divider;
                 }
-            }  
+            } 
         }
       
     }
