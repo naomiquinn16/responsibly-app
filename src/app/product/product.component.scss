@@ -1,9 +1,38 @@
-.product {
+@import '../../assets/scss/placeholders';
+@import '../../assets/scss/variables';
+
+.product{
     display: flex;
     justify-content: center;
     align-items: center;
     &__container{
-        width: 80vw;
+        width: 70vw;
+        &__data{
+            height: 90vh; 
+        }
+        &__legal, &__user{
+            height: 75vh; 
+        }
+
+        &__data, &__legal, &__user{
+            &__box{
+                h1{
+                    font-size: 3rem;
+                    color: map-get($colors, headings);
+                }
+                button{
+                    @extend %contact-button;
+                }
+                p{
+                    line-height: 1.5rem;
+                    color: map-get($colors, paragraphs);
+                }
+
+                &__divider{
+                   @extend %divider;
+                }
+            } 
+        }
       
     }
 
