@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   members = [
     {
-      name: 'Abhishek Khanna',
+      name: 'Guy Murphy',
       image: '../../assets/images/boy.jpeg',
       role: 'Co Founder & CEO',
       linkedin: 'https://ie.linkedin.com/',
