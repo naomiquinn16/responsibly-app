@@ -1,14 +1,24 @@
-<div class="about">
-    <div class="about__container">
-     <section class="about__container__landing">
-
-
-     </section>
-     <section class="about__container__knowledge">
-       
-    </section>
-    <section class="about__container__integration">
-       
-    </section>
+<div class="about" fxLayout="column">
+    <h2>Meet Our Team</h2>
+    <div class="about__divider"></div>
+    <p>We are a multicutural and diverse team of creative 
+        problem solvers based in Dublin Ireland. 
+        We are passionate about machine learning 
+        and the impact it is having on todays world.  
+        Reach out and let's chat!
+    </p>
+    <div class="about__container" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="5%">
+        <div fxFlex.gt-sm="30%" fxFlex.xs="50%" *ngFor="let member of members">
+            <mat-card class="about__container__card" fxLayout="column" fxLayoutAlign="center center">
+                <img width="100%" src="{{member.image}}">
+                <h4 class="about__container__card__member-name">{{member.name}}</h4>
+                <h6 class="about__container__card__member-role">{{member.role}}</h6>
+                <div fxLayout="row" fxLayoutGap="20%" fxLayoutAlign="center center">
+                    <a href="{{member.linkedin}}" target="_blank"><img width="24px" src="../../assets/images/linkedin-in-brands.svg"></a>
+                    <a href="{{member.twitter}}" target="_blank"><img width="24px" src="../../assets/images/twitter-brands.svg"></a>
+                    <a href="{{member.github}}" target="_blank"><img width="24px" src="../../assets/images/github-brands.svg"></a>
+                </div>
+            </mat-card>
+        </div>
     </div>
 </div>
