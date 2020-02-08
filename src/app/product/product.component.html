@@ -1,5 +1,44 @@
 <div class="product">
     <div fxLayout="column" class="product__container">
+    <section class="product__container__introduction">
+        <h2> Product </h2>
+        <div class="product__container__legal__box__divider"></div>
+        <p>
+            The ethics of AI is a critical challenge for the global tech industry. 
+            The speed with which AI is changing the world has urged the industry to incorporate ethical 
+            considerations into technology design, development, deployment and use before being brought to market. 
+            But who is truly responsible for ensuring these new technologies are ethical?
+            Is it the data scientist who builds and monitors the AI model or the lawyer who signs off on its release to market? 
+            Or ... is it both?
+        </p>
+        <p>
+            In the infancy of age of AI, law has to be (in a way applied and enforced) with a certain agility 
+            so as not to not impede the innovation of technology. And, with many companies lacking even a basic 
+            framework for grappling with how their AI products should be designed, built and used responsibly, no one really wants to push the red button for fear of the detrimental 
+            consequences that could ensue.
+        </p>
+        <p> So this is why we built Responsibly. </p>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="3%" style="margin: 3rem 0 4rem;">
+            <div fxFlex="25%" *ngFor="let stat of stats">
+                <mat-card class="product__container__introduction__card">
+                    <h3 class="product__container__introduction__card__value">{{stat.value}}</h3>
+                    <div class="product__container__introduction__card__text">{{stat.text}}</div>
+                </mat-card>
+            </div>
+        </div>
+
+    </section>
+    <section class="product__container__vision" fxLayout="row" fxLayoutAlign="center center">
+        <div class="product__container__vision__statement">
+            <h4>Our Vision is to bridge the gap between data science and 
+                legal teams so that in the future, they can collaborate 
+                and be part of an AI Ecosystem that creates ethical, 
+                explainable and interpretable AI products which can 
+                be trusted by consumers.
+            </h4>
+            <button mat-raised-button>Get in Touch</button>
+        </div>
+    </section>
      <section fxLayout="row" fxLayoutAlign="center center" class="product__container__data">
         <div fxLayout="column" fxFlex="40%" fxLayoutAlign="center flex-start" class="product__container__data__box">
             <h2> Enable Data Scientists & Engineers </h2>

@@ -2,24 +2,58 @@
 @import '../../assets/scss/variables';
 
 .product{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
     &__container{
-        width: 70vw;
-        &__data{
-            height: 90vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: map-get($colors, headings);
         }
-        &__legal, &__user{
-            height: 75vh; 
+
+        &__introduction{
+            width: 70vw;
+            margin-top: 10%;
+            p{
+                line-height: 1.5rem;
+                color: map-get($colors, paragraphs);
+            }
+        
+            &__card{
+                border-radius: 0;
+                box-shadow: 0 10px 10px 0 rgb(0, 0, 0, .12);
+                &__value{
+                    color: map-get($colors , primary );
+                    font-size: 2rem;
+                }
+                &__text{
+                    color: #acacac;
+                    font-size: .8rem;
+                    line-height: 1.3rem;
+                }
+            }
+        }
+
+        &__vision{
+            color: white;
+            width: 100%;
+            background-color: map-get($colors , primary );
+            &__statement{
+                padding: 4rem 0;
+                width: 70%;
+                button{
+                    @extend %contact-button;
+                    color: map-get($colors , primary );
+                    background-color: white;   
+                }
+            }
         }
 
         &__data, &__legal, &__user{
+            width: 70vw;
+            margin: 6% 0;
             &__box{
-                h1{
-                    font-size: 3rem;
-                    color: map-get($colors, headings);
-                }
+
                 button{
                     @extend %contact-button;
                 }
