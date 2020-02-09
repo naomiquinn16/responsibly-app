@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,20 +18,21 @@ import { ContactComponent } from '../contact/contact.component';
 import { BlogComponent } from '../blog/blog.component';
 import { GetStartedComponent } from '../get-started/get-started.component'
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     AboutComponent,
     ProductComponent,
     IntegrationComponent,
-    ContactComponent,
+    ContactComponent, 
     BlogComponent,
     GetStartedComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  contactForm: FormGroup;
   contacts = [
     {
       ligature: 'location_on',
@@ -19,9 +21,21 @@ export class ContactComponent implements OnInit {
       text: 'responsibly.ai@gmail.com'
     }
   ];
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.contactForm = this.formBuilder.group({
+      name:new FormControl(''),
+      email:new FormControl(''),
+      message: new FormControl('')
+  });
+
+  }
+
+  onFormSubmit(form: FormGroup){
+    console.log(form);
   }
 
 }
