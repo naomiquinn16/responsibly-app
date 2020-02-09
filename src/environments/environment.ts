@@ -7,7 +7,7 @@ export const environment = {
 
   feature: {
     activateTeamSection: false
-}
+  }
 };
 
 /*
