@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     &__container{ 
-        margin: 10% 0 5%;
+        margin: 5% 0 5%;
         width: 70vw;
         h2 {
             color: map-get($colors, headings );
@@ -30,6 +30,10 @@
           display: flex;
           justify-content: flex-end;
           align-items: center;
+
+          button{
+              @extend %contact-button;
+          }
       }
     }
 
