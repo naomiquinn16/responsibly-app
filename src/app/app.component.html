@@ -5,7 +5,7 @@
   <section role="main" class="app__main">
     <app-main></app-main>
   </section>
-  <section class="app__get-started">
+  <section *ngIf="isContactRoute()" class="app__get-started">
     <app-get-started></app-get-started>
   </section>
   <footer class="app__footer" aria-label="App Footer">
