@@ -39,8 +39,10 @@
             width: 100%;
             background-color: map-get($colors , primary );
             &__statement{
+                font-size: 1.3;
                 padding: 4rem 0;
                 width: 70%;
+                line-height: 2rem;
                 button{
                     @extend %contact-button;
                     color: map-get($colors , primary );

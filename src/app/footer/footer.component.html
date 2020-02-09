@@ -1,9 +1,22 @@
 <div class="footer" fxLayout="column">
     <div class="footer__social">
-hi
+        <div *ngFor="let icon of icons">
+            <a class="footer__social__link" href="{{icon.url}}" target="_blank">
+                <img width="24px" src="{{icon.path}}" alt="social icon">
+            </a>
+        </div>
     </div>
     <div class="footer__general">
-        helo
+        <div class="footer__general__logo">
+            <div>Responsibly</div>
+        </div>
+        <div class="footer__general__terms">
+           <a>Terms & Conditions</a>
+           <a>Usage</a>
+           <a>Privacy</a>
+        </div>
+        <div class="footer__general__copyright">
+           @Copyright Responsibly 2020
+        </div>
     </div>
-
 </div>

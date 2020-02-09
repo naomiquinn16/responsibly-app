@@ -1,9 +1,31 @@
+@import '../../assets/scss/placeholders';
+
 .integration {
     display: flex;
     justify-content: center;
     align-items: center;
     &__container{
-        width: 80vw;
+        width: 70vw;
+        margin-top: 10%;
+        &__section{
+            &__box{
+                h1{
+                    font-size: 3rem;
+                    color: map-get($colors, headings);
+                }
+                button{
+                    @extend %contact-button;
+                }
+                p{
+                    line-height: 1.5rem;
+                    color: map-get($colors, paragraphs);
+                }
+
+                &__divider{
+                   @extend %divider;
+                }
+            } 
+        }
       
     }
 

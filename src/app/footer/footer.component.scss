@@ -1,12 +1,46 @@
 .footer{
-
     &__social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #504F60;
         height: 7rem;
+
+        &__link{
+            margin: 0 .75rem;
+        }
     }
     &__general{
+        display: flex;
+        flex-direction: row;
         background-color: black;
         height: 5rem;
+
+        &__logo{
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+
+        &__terms{
+            justify-content: center;
+            a {
+                margin: 0 1rem;
+                font-size: .8rem;
+            }
+        }
+
+        &__copyright{
+            justify-content: flex-end;
+            margin-right: 1rem;
+            font-size: .8rem;
+        }
+
+        &__logo, &__terms, &__copyright{
+            width: 33.33%;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
     }
       
 }
