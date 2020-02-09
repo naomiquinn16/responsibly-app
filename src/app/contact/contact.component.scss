@@ -1,10 +1,36 @@
+@import '../../assets/scss/placeholders';
+@import '../../assets/scss/variables';
+
 .contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    &__container{
-        width: 80vw;
-      
+    &__container{ 
+        margin: 10% 0 5%;
+        width: 70vw;
+        h2 {
+            color: map-get($colors, headings );
+        }
+        h3 {
+            margin: 0;
+            color: map-get($colors, headings );
+        }
+        p {
+            color: #a7a7a7;
+        }
+
+        mat-icon {
+            color: map-get($colors , primary );
+        }
+        &__divider{
+            @extend %divider;
+            margin-bottom: 4rem;
+        }
+      &__form{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+      }
     }
 
 }

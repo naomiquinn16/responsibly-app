@@ -13,7 +13,7 @@
 
         &__introduction{
             width: 70vw;
-            margin-top: 10%;
+            margin-top: 5%;
             p{
                 line-height: 1.5rem;
                 color: map-get($colors, paragraphs);
@@ -66,6 +66,7 @@
 
                 &__divider{
                    @extend %divider;
+                   margin-bottom: 1rem;
                 }
             } 
         }

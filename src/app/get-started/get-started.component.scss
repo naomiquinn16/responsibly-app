@@ -24,6 +24,7 @@
         }
         &__divider{
             @extend %divider;
+            margin-bottom: 1rem;
         }    
     }
 }

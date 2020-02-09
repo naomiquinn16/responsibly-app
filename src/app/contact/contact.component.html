@@ -1,15 +1,37 @@
 <div class="contact">
-    <div class="contact__container">
-     <section class="contact__container__landing">
+    <div class="contact__container" fxLayout="column">
+        <h2> Contact Us</h2>
+        <div class="contact__container__divider"></div>
+        <section fxLayout="row" fxLayoutGap="10%">
+            <div fxFlex="20%" fxLayout="column" fxLayoutGap="5%">
+                <div *ngFor="let contact of contacts" fxLayout="row">
+                    <div style="margin-right: 1rem;">
+                        <mat-icon>{{contact.ligature}}</mat-icon>
+                    </div>
+                    <div fxLayout="column">
+                        <h3>{{contact.title}}</h3>
+                        <p>{{contact.text}}</p>
+                    </div>
+                </div>
+            </div>
+            <form fxFlex="70%">
+                <div class="contact__container__form" fxLayout="column">
+                    <mat-form-field style="width: 100%;">
+                        <mat-label>Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field style="width: 100%;">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field style="width: 100%;">
+                        <mat-label>Your Message</mat-label>
+                        <textarea matInput></textarea>
+                    </mat-form-field>
+                </div>  
+            </form>
+        </section>
 
-
-     </section>
-     <section class="contact__container__knowledge">
-       
-    </section>
-    <section class="contact__container__integration">
-       
-    </section>
     </div>
 </div>
 
