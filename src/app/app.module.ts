@@ -13,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { GetStartedComponent } from './get-started/get-started.component';
 import { MainComponent } from './main/main.component';
 
 
@@ -22,8 +21,8 @@ import { MainComponent } from './main/main.component';
     AppComponent,
     NavComponent,
     FooterComponent,
-    GetStartedComponent,
     MainComponent
+    
   ],
   imports: [
     BrowserModule,

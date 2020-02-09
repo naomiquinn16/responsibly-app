@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-nav',
@@ -6,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+
+
+
   menuItems = [
     {
       text: 'Home',
       path: '/'
     },
-    {
-      text: 'Team',
-      path: '/team'
-    },
+    // {
+    //   text: 'Team',
+    //   path: '/team'
+    // },
     {
       text: 'Product',
       path: '/product'
@@ -32,9 +37,11 @@ export class NavComponent implements OnInit {
       path: '/blog'
     }
   ];
+
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

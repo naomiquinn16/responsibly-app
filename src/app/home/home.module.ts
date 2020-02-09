@@ -14,6 +14,7 @@ import { ProductComponent } from '../product/product.component';
 import { IntegrationComponent } from '../integration/integration.component';
 import { ContactComponent } from '../contact/contact.component';
 import { BlogComponent } from '../blog/blog.component';
+import { GetStartedComponent } from '../get-started/get-started.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BlogComponent } from '../blog/blog.component';
     ProductComponent,
     IntegrationComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    GetStartedComponent
   ],
   imports: [
     CommonModule,

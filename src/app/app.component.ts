@@ -12,12 +12,4 @@ export class AppComponent {
   constructor(public router: Router){
 
   }
-
-  isContactRoute(){
-      if (this.router.url === '/contact'){
-        return false;
-      }
-        else 
-          return true;
-  }
 }

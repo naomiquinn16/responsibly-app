@@ -7,6 +7,7 @@ import { ProductComponent } from '../product/product.component';
 import { IntegrationComponent } from '../integration/integration.component';
 import { ContactComponent } from '../contact/contact.component';
 import { BlogComponent } from '../blog/blog.component';
+import { FeatureToggleGuardService as FeatureToggleGuard } from '../shared/guards/feature-toggle-guard.service';
 
 const homeRoutes: Routes = [
     {
@@ -15,7 +16,8 @@ const homeRoutes: Routes = [
     },
     {
         path: 'team',
-        component: AboutComponent
+        component: AboutComponent,
+        canActivate: [FeatureToggleGuard]
     },
     {
         path: 'product',
@@ -28,7 +30,8 @@ const homeRoutes: Routes = [
     },
     {
         path: 'contact',
-        component: ContactComponent
+        component: ContactComponent,
+        
     },
     {
         path: 'blog',
