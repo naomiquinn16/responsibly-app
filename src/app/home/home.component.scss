@@ -1,5 +1,6 @@
 @import '../../assets/scss/placeholders';
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .home {
     display: flex;
@@ -7,17 +8,53 @@
     align-items: center;
     &__container{
         width: 75vw;
+        @include extra-small-screen {
+            width: 90vw;
+        }
+
         &__landing{
             height: 100vh; 
+            @include extra-small-screen {
+                display: flex;
+                flex-flow: row wrap-reverse;
+                margin-top: 4rem;
+                
+            }
+            
         }
         &__knowledge, &__integration{
             height: 80vh; 
+            @include extra-small-screen {
+                height: auto;
+                display: flex;
+                flex-flow: row wrap-reverse;
+                height: auto;   
+            }
+        }
+
+        &__integration{  
+            @include extra-small-screen {
+                margin-top: 2rem;
+                    
+            }  
+            
         }
 
         &__landing, &__knowledge, &__integration{
             &__box{
+                @include small-screen {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                        
+                }
+              
                 h1{
                     font-size: 3rem;
+                    @include extra-small-screen {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
                     color: map-get($colors, headings);
                 }
                 button{

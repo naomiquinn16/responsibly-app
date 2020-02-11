@@ -1,17 +1,17 @@
 <div class="home">
     <div fxLayout="column" class="home__container">
-     <section fxLayout="row" fxLayoutAlign="center center" class="home__container__landing">
-        <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="home__container__landing__box">
+     <section fxLayoutAlign="center center" class="home__container__landing">
+        <div fxLayout="column" fxFlex.gt-xs="45%" fxLayoutAlign.gt-xs="center flex-start" fxLayoutAlign.xs="center center" class="home__container__landing__box">
             <h1>Cultivating an Artificial Intelligent Ecosystem that empowers teams to innovate responsibly. </h1>
             <button mat-raised-button routerLink="/contact">Get in Touch</button>  
         </div>
-        <div fxFlex="55%" fxLayoutAlign="center center">
+        <div fxFlex.gt-xs="55%" fxLayoutAlign="center center">
             <img width="80%" src="../../assets/images/home-landing.png" alt="">
         </div>
      </section>
 
-     <section fxLayout="row" class="home__container__knowledge">
-        <div fxFlex="55%" fxLayoutAlign="center center">
+     <section fxLayout="column" fxLayout.gt-sm="row"  class="home__container__knowledge">
+        <div fxFlex="55%" style="margin-bottom: 2rem;" fxLayoutAlign="center center">
             <img width="80%" src="../../assets/images/home-knowledge.png" alt="">
         </div>
         <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="home__container__knowledge__box">
@@ -32,8 +32,8 @@
         </div> 
     </section>
 
-    <section fxLayout="row" class="home__container__integration">
-        <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="home__container__integration__box">
+    <section fxLayoutAlign="center center" class="home__container__integration">
+        <div fxLayout="column" fxFlex.gt-xs="45%" fxLayoutAlign="center flex-start" class="home__container__integration__box">
             <h2>Seamless Integration</h2>
             <div class="home__container__integration__box__divider"></div>
             <p>
@@ -52,7 +52,7 @@
                 It's that simple!
             </p>
         </div> 
-        <div fxFlex="55%" fxLayoutAlign="center center">
+        <div fxFlex.gt-xs="55%" fxLayoutAlign="center center">
             <img width="80%" src="../../assets/images/home-integ.png" alt="">
         </div>
     </section>

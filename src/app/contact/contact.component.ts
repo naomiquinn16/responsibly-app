@@ -34,8 +34,6 @@ export class ContactComponent implements OnInit {
 
   }
 
-  onFormSubmit(form: FormGroup){
-    console.log(form);
-  }
+ 
 
 }

@@ -14,30 +14,26 @@
                     </div>
                 </div>
             </div>
-            <form fxFlex="70%"  
-                [formGroup]="contactForm" 
-                name="contactForm"
-                (ngSubmit)="onFormSubmit(contactForm.value)" 
-                data-netlify="true"
+            <form fxFlex="70%"   
+                name="contact"
+                data-netlify=”true”
                 method="POST"
+                id="contactForm" 
                >
                 <div class="contact__container__form" fxLayout="column" fxLayoutAlign="start">
                     <mat-form-field>
                         <mat-label>Name</mat-label>
-                        <input matInput formControlName="name" name="name" type="text">
+                        <input matInput name="name" type="text">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Email Address</mat-label>
-                        <input matInput formControlName="email" name="email" type="text" >
+                        <input matInput  name="email" type="email" >
                     </mat-form-field>
                     <mat-form-field     >
                         <mat-label>Your Message</mat-label>
-                        <textarea matInput formControlName="message" name="message" type="text" ></textarea>
+                        <textarea matInput name="message"></textarea>
                     </mat-form-field>
-                    <div class="field">
-                        <div data-netlify-recaptcha="true"></div>
-                    </div>
-                    <button type="submit" mat-raised-button>Submit</button>
+                    <button  id="submitForm" type="submit" mat-raised-button>Submit</button>
                 </div>  
             </form>
         </section>
