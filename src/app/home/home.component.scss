@@ -1,76 +1,71 @@
-@import '../../assets/scss/placeholders';
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/placeholders";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__container{
-        width: 75vw;
-        @include extra-small-screen {
-            width: 90vw;
-        }
-
-        &__landing{
-            height: 100vh; 
-            @include extra-small-screen {
-                display: flex;
-                flex-flow: row wrap-reverse;
-                margin-top: 4rem;
-                
-            }
-            
-        }
-        &__knowledge, &__integration{
-            height: 80vh; 
-            @include extra-small-screen {
-                height: auto;
-                display: flex;
-                flex-flow: row wrap-reverse;
-                height: auto;   
-            }
-        }
-
-        &__integration{  
-            @include extra-small-screen {
-                margin-top: 2rem;
-                    
-            }  
-            
-        }
-
-        &__landing, &__knowledge, &__integration{
-            &__box{
-                @include small-screen {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                        
-                }
-              
-                h1{
-                    font-size: 3rem;
-                    @include extra-small-screen {
-                        font-size: 2rem;
-                        text-align: center;
-                    }
-                    color: map-get($colors, headings);
-                }
-                button{
-                    @extend %contact-button;
-                }
-                p{
-                    line-height: 1.5rem;
-                    color: map-get($colors, paragraphs);
-                }
-
-                &__divider{
-                   @extend %divider;
-                }
-            } 
-        }
-      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    width: 75vw;
+    @include extra-small-screen {
+      width: 90vw;
     }
 
+
+    &__integration {
+        display: flex;
+        @include extra-small-screen {
+            flex-flow: row wrap-reverse;
+        @include small-screen {
+            flex-flow: row wrap-reverse;
+        }
+      }
+    }
+
+    &__landing,
+    &__knowledge,
+    &__integration {
+        margin: 15% 0 0;
+
+      &__box {
+        display: flex;
+        @include small-screen {
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__title {
+          font-size: 2.2rem;
+          color: map-get($colors, headings);
+          @include extra-small-screen {
+            text-align: center;
+          }
+        }
+        button {
+          @extend %contact-button;
+        }
+        p {
+          line-height: 1.5rem;
+          color: map-get($colors, paragraphs);
+        }
+
+        &__divider {
+          @extend %divider;
+        }
+      }
+    }
+    
+        &__landing {
+            display: flex;
+            @include extra-small-screen {
+                margin: 10rem 0 5rem;
+                flex-flow: row wrap-reverse; 
+            }
+            @include small-screen {
+                margin: 10rem 0 5rem;
+                flex-flow: row wrap-reverse;
+            }
+        }
+  }
 }
