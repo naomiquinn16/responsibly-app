@@ -1,7 +1,6 @@
 @import '../../assets/scss/placeholders';
-
+@import '../../assets/scss/mixins';
 .blog {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +9,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 5%;
-        width: 70vw;
+        margin: 15% 0 0;
+        width: 75vw;
+        @include small-screen{
+          margin: 12rem 0 0;
+          width: 85vw;
+        }
+        @include extra-small-screen{
+          margin: 12rem 0 0;
+          width: 85vw;
+        }
+        &__image{
+          width: 30%;
+          @include extra-small-screen{
+            width: 40%;
+          }
+        }
       button{
         @extend %contact-button;
         margin: 4rem 0;
