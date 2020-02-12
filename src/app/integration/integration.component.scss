@@ -1,13 +1,27 @@
 @import '../../assets/scss/placeholders';
+@import '../../assets/scss/mixins';
 
 .integration {
     display: flex;
     justify-content: center;
     align-items: center;
+        
     &__container{
-        width: 70vw;
+        width: 75vw;
+        @include extra-small-screen {
+            width: 85vw;
+          }
         margin-top: 10%;
         &__section{
+            display: flex;
+            @include extra-small-screen { 
+                flex-flow: row wrap-reverse;
+                margin-top: 6rem;
+            }
+            @include small-screen {
+                margin-top: 6rem;
+                flex-flow: row wrap-reverse;
+            }
             &__box{
                 h1{
                     font-size: 3rem;
