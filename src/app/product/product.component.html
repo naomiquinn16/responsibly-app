@@ -18,8 +18,8 @@
             consequences that could ensue.
         </p>
         <p> So this is why we built Responsibly. </p>
-        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="3%" style="margin: 3rem 0 4rem;">
-            <div fxFlex="25%" *ngFor="let stat of stats">
+        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutGap="3%" style="margin: 3rem 0 4rem;">
+            <div *ngFor="let stat of stats">
                 <mat-card class="product__container__introduction__card">
                     <h3 class="product__container__introduction__card__value">{{stat.value}}</h3>
                     <div class="product__container__introduction__card__text">{{stat.text}}</div>
@@ -39,8 +39,9 @@
             <button mat-raised-button routerLink="/contact">Get in Touch</button>
         </div>
     </section>
+
      <section fxLayout="row" fxLayoutAlign="center center" class="product__container__data">
-        <div fxLayout="column" fxFlex="40%" fxLayoutAlign="center flex-start" class="product__container__data__box">
+        <div fxLayout="column" fxFlex.gt-sm="40%" fxLayoutAlign="center flex-start" class="product__container__data__box">
             <h2> Enable Data Scientists & Engineers </h2>
             <div class="product__container__legal__box__divider"></div>
             <p>
@@ -48,16 +49,16 @@
                 and reducing bias in their data and AI Models.
             </p>
         </div>
-        <div fxFlex="60%" fxLayoutAlign="center center">
+        <div fxFlex.gt-sm="60%" fxLayoutAlign="center center"  style="margin-bottom: 1rem;">
             <img width="80%" src="../../assets/images/product-data.png" alt="">
         </div>
      </section>
 
-     <section fxLayout="row" class="product__container__legal">
-        <div fxFlex="55%" fxLayoutAlign="center center">
+     <section fxLayout.gt-sm="row" fxLayout="column" class="product__container__legal">
+        <div fxFlex.gt-sm="55%" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
             <img width="80%" src="../../assets/images/product-legal.png" alt="">
         </div>
-        <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="product__container__legal__box">
+        <div fxLayout="column" fxFlex.gt-sm="45%" fxLayoutAlign="center flex-start" class="product__container__legal__box">
             <h2>Empower In House Legal Teams</h2>
             <div class="product__container__legal__box__divider"></div>
             <p>
@@ -69,8 +70,8 @@
         </div> 
     </section>
 
-    <section fxLayout="row" class="product__container__user">
-        <div fxLayout="column" fxFlex="45%" fxLayoutAlign="center flex-start" class="product__container__user__box">
+    <section fxLayout="row" fxLayoutAlign="center center" class="product__container__user">
+        <div fxLayout="column" fxFlex.gt-sm="45%" fxLayoutAlign="center flex-start" class="product__container__user__box">
             <h2>Create transparency for end users</h2>
             <div class="product__container__user__box__divider"></div>
             <p>
@@ -81,7 +82,7 @@
             </p>
 
         </div> 
-        <div fxFlex="55%" fxLayoutAlign="center center">
+        <div fxFlex.gt-sm="55%" fxLayoutAlign="center center"  style="margin-bottom: 1rem;">
             <img width="80%" src="../../assets/images/product-user.png" alt="">
         </div>
     </section>

@@ -1,5 +1,6 @@
 @import '../../assets/scss/placeholders';
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .product{
     margin: 0 auto;
@@ -13,7 +14,16 @@
 
         &__introduction{
             width: 70vw;
+            @include extra-small-screen {
+                width: 85vw;
+              }
             margin-top: 5%;
+            @include small-screen {
+                margin-top: 10rem;
+            }
+            @include extra-small-screen {
+                margin-top: 10rem;
+            }
             p{
                 line-height: 1.5rem;
                 color: map-get($colors, paragraphs);
@@ -21,6 +31,7 @@
         
             &__card{
                 border-radius: 0;
+                max-width: 15rem;
                 box-shadow: 0 10px 10px 0 rgb(0, 0, 0, .12);
                 &__value{
                     color: map-get($colors , primary );
@@ -69,6 +80,18 @@
                    margin-bottom: 1rem;
                 }
             } 
+        }
+
+        &__data, &__user {
+            display: flex;
+            @include extra-small-screen {
+                margin: 10rem 0 5rem;
+                flex-flow: row wrap-reverse;
+              }
+              @include small-screen {
+                margin: 10rem 0 5rem;
+                flex-flow: row wrap-reverse;
+              }
         }
       
     }
