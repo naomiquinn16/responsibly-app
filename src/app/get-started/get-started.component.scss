@@ -1,17 +1,12 @@
 @import '../../assets/scss/placeholders';
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .get-started {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     &__container{
-        width: 75vw;
+        width: 85vw;
+        
         height: 60vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         h1{
             color: map-get($colors, headings);
         }
