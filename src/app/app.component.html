@@ -1,6 +1,10 @@
 <div class="app">
+ 
   <nav class="app__navbar">
-    <app-nav></app-nav>
+    <app-nav (sidenavToggle)="sidenav.toggle()"></app-nav>
+    <mat-sidenav #sidenav role="navigation" fxShow.gt-sm="false" fxShow="true">
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
   </nav>
   <section role="main" class="app__main">
     <app-main></app-main>

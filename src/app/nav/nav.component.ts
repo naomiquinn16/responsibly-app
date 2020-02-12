@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 
@@ -8,9 +8,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
-
-
+  
+  @Output() public sidenavToggle = new EventEmitter();
   menuItems = [
     {
       text: 'Home',
@@ -42,6 +41,11 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
+    console.log('hello')
   }
 
 }
