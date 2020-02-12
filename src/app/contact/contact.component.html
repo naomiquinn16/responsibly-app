@@ -2,7 +2,7 @@
     <div class="contact__container" fxLayout="column">
         <h2> Contact Us</h2>
         <div class="contact__container__divider"></div>
-        <section fxLayout="row" fxLayoutGap="10%">
+        <section fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="10%">
             <div fxFlex="20%" fxLayout="column" fxLayoutGap="5%">
                 <div *ngFor="let contact of contacts" fxLayout="row">
                     <div style="margin-right: 1rem;">
