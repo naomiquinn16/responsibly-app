@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
-
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +10,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  
+  showBurger = true;
+  selectedURL: string;
   @Output() public sidenavToggle = new EventEmitter();
   menuItems = [
     {
@@ -37,15 +40,33 @@ export class NavComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialog,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     
   }
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
-    console.log('hello')
-  }
+   onToggleSidenav() {
+      this.showBurger = false;
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.autoFocus = true;
+      dialogConfig.minWidth = '100vw';
+      dialogConfig.minHeight = '100vh';
+      dialogConfig.panelClass = 'overlay';
+      dialogConfig.data = {
+        showBurger: this.showBurger,
+      };
+      const dialogRef = this.dialog.open(SidenavListComponent, dialogConfig);
+      dialogRef.afterClosed().subscribe(data =>
+        this.goToPage(data)
+      );
+    }
 
+    goToPage(data){
+      this.selectedURL = data.selectedMenuField;
+      this.router.navigate(['/',this.selectedURL]);
+    }
 }

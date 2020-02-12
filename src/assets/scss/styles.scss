@@ -2,6 +2,7 @@
 @import 'my-theme';
 @import 'placeholders';
 @import 'mixins';
+@import 'variables';
 
 html, body {
     height: 100%;
@@ -21,4 +22,18 @@ html, body {
   h6 {
       font-weight: 500;
 }
-  
+
+
+.overlay {
+  mat-dialog-container {
+    background-color: map-get($colors, primary);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .mat-dialog-content{
+      opacity: 1;
+    }
+
+  }
+}

@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -33,11 +33,12 @@ import { SidenavListComponent } from './nav/sidenav-list/sidenav-list.component'
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatDialogModule
 
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [SidenavListComponent]
 })
 export class AppModule { }
