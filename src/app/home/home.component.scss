@@ -9,24 +9,13 @@
   &__container {
     width: 75vw;
     @include extra-small-screen {
-      width: 90vw;
-    }
-
-
-    &__integration {
-        display: flex;
-        @include extra-small-screen {
-            flex-flow: row wrap-reverse;
-        @include small-screen {
-            flex-flow: row wrap-reverse;
-        }
-      }
+      width: 85vw;
     }
 
     &__landing,
     &__knowledge,
     &__integration {
-        margin: 15% 0 0;
+      margin: 15% 0 0;
 
       &__box {
         display: flex;
@@ -55,17 +44,28 @@
         }
       }
     }
-    
-        &__landing {
-            display: flex;
-            @include extra-small-screen {
-                margin: 10rem 0 5rem;
-                flex-flow: row wrap-reverse; 
-            }
-            @include small-screen {
-                margin: 10rem 0 5rem;
-                flex-flow: row wrap-reverse;
-            }
-        }
+
+    &__landing {
+      display: flex;
+      @include extra-small-screen {
+        margin: 10rem 0 5rem;
+        flex-flow: row wrap-reverse;
+      }
+      @include small-screen {
+        margin: 10rem 0 5rem;
+        flex-flow: row wrap-reverse;
+      }
+    }
+
+    &__integration {
+      display: flex;
+      flex-direction: row;
+      @include small-screen {
+        flex-flow: row wrap-reverse;
+      }
+      @include extra-small-screen {
+        flex-flow: row wrap-reverse;
+      }
+    }
   }
 }
