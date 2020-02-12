@@ -31,4 +31,9 @@ export class SidenavListComponent implements OnInit {
     this.dialogRef.close({showBurger: this.showBurger , selectedMenuField: menuField});
   }
 
+  closeMenu() {
+    this.showBurger = true;
+    this.dialogRef.close();
+  }
+
 }
