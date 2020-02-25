@@ -14,28 +14,30 @@
                     </div>
                 </div>
             </div>
-            <form fxFlex="70%"   
-                name="contact"
-                data-netlify=”true”
-                method="POST"
-                id="contactForm" 
-               >
-                <div class="contact__container__form" fxLayout="column" fxLayoutAlign="start">
-                    <mat-form-field>
-                        <mat-label>Name</mat-label>
-                        <input matInput name="name" type="text">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Email Address</mat-label>
-                        <input matInput  name="email" type="email" >
-                    </mat-form-field>
-                    <mat-form-field     >
-                        <mat-label>Your Message</mat-label>
-                        <textarea matInput name="message"></textarea>
-                    </mat-form-field>
-                    <button  id="submitForm" type="submit" mat-raised-button>Submit</button>
-                </div>  
-            </form>
+
+            <div id='form-wrapper' fxFlex="70%">
+                <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
+                    <div class="contact__container__form" fxLayout="column" fxLayoutAlign="start">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p style='display: none;'>
+                          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <mat-form-field>
+                            <mat-label>Name</mat-label>
+                            <input matInput type="text" name="name" formControlName="name" required>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" name="email" formControlName="email" required>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Your Message</mat-label>
+                            <textarea matInput id="message" name="message" formControlName="message" required></textarea>
+                        </mat-form-field>
+                        <button mat-raised-button id="submit-button" type="submit" [disabled]="!contactForm.valid">Submit</button> 
+                    </div>
+                  </form>
+            </div>
         </section>
     </div>
 </div>
