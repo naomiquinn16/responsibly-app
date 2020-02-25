@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -31,6 +32,7 @@ import { GetStartedComponent } from '../get-started/get-started.component'
   imports: [
     CommonModule,
     HomeRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
