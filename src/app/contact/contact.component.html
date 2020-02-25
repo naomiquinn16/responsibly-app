@@ -34,7 +34,7 @@
                             <mat-label>Your Message</mat-label>
                             <textarea matInput id="message" name="message" formControlName="message" required></textarea>
                         </mat-form-field>
-                        <button mat-raised-button id="submit-button" type="submit">Contact Me!</button> 
+                        <button mat-raised-button id="submit-button" type="submit" [disabled]="!contactForm.valid">Submit</button> 
                     </div>
                   </form>
             </div>

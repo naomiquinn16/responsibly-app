@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -28,8 +29,8 @@ export class ContactComponent implements OnInit {
   ];
 
   constructor(
-    private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -48,13 +49,16 @@ export class ContactComponent implements OnInit {
         if (err instanceof ErrorEvent) {
           //client side error
           alert("Something went wrong when sending your message.");
+          this.router.navigate(['/contact']);
           console.log(err.error.message);
         } else {
           //backend error. If status is 200, then the message successfully sent
           if (err.status === 200) {
             alert("Your message has been sent!");
+            this.router.navigate(['/']);
           } else {
             alert("Something went wrong when sending your message.");
+            this.router.navigate(['/contact']);
             console.log('Error status:');
             console.log(err.status);
             console.log('Error body:');
