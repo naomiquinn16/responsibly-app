@@ -1,31 +1,34 @@
 <div class="product">
     <div fxLayout="column" class="product__container">
     <section class="product__container__introduction">
-        <h2> Product </h2>
+        <h2> Problem </h2>
         <div class="product__container__legal__box__divider"></div>
-        <p>
-            The ethics of AI is a critical challenge for the global tech industry. 
-            The speed with which AI is changing the world has urged the industry to incorporate ethical 
-            considerations into technology design, development, deployment and use before being brought to market. 
-            But who is truly responsible for ensuring these new technologies are ethical?
-            Is it the data scientist who builds and monitors the AI model or the lawyer who signs off on its release to market? 
-            Or ... is it both?
-        </p>
-        <p>
-            In the infancy of age of AI, law has to be (in a way applied and enforced) with a certain agility 
-            so as not to not impede the innovation of technology. And, with many companies lacking even a basic 
-            framework for grappling with how their AI products should be designed, built and used responsibly, no one really wants to push the red button for fear of the detrimental 
-            consequences that could ensue.
-        </p>
-        <p> So this is why we built Responsibly. </p>
-        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutGap="3%" style="margin: 3rem 0 4rem;">
+
+        <div fxLayout="column"fxLayout.gt-sm="row">
+            <div fxFlex="40%" fxLayout="column">
+                <p>
+
+                    The ethics of AI, is a critical challenge for the global tech industry. The speed with which AI 
+                    is changing the world has urged the industry to incorporate ethical 
+                    considerations when developing new machine learning products. With almost no laws specifically governing AI, 
+                    most companies lack a basic AI ethics framework to regulate how their AI is being developed, tested and used. 
+                </p>
+                <p>So this is why we built Responsibly. </p>
+            </div>
+           <div fxFlex="60%">
+            <img width="100%" src="../../assets/images/thinking.png" alt="thinking image">
+           </div> 
+        </div>
+        
+       
+        <!-- <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutGap="3%" style="margin: 3rem 0 4rem;">
             <div *ngFor="let stat of stats">
                 <mat-card class="product__container__introduction__card">
                     <h3 class="product__container__introduction__card__value">{{stat.value}}</h3>
                     <div class="product__container__introduction__card__text">{{stat.text}}</div>
                 </mat-card>
             </div>
-        </div>
+        </div> -->
 
     </section>
     <section class="product__container__vision" fxLayout="row" fxLayoutAlign="center center">
@@ -40,13 +43,21 @@
         </div>
     </section>
 
+    <div style="width:70vw; margin: 4rem 0 0;">
+        <h2> Our Product - Platform as a Service </h2>
+        <p>Responsibly is an AI auditing and reporting platform that helps businesses design, develop and test AI products to ensure they are fair, ethical, explainable & interpretable before being signed off by legal teams and brought to market.
+        </p>       
+    
+    </div>
+        
      <section fxLayout="row" fxLayoutAlign="center center" class="product__container__data">
+       
         <div fxLayout="column" fxFlex.gt-sm="40%" fxLayoutAlign="center flex-start" class="product__container__data__box">
-            <h2> Enable Data Scientists & Engineers </h2>
+            <h2> Bias Detection and Removal </h2>
             <div class="product__container__legal__box__divider"></div>
             <p>
-                We enable data scientists and engineers by detecting 
-                and reducing bias in their data and AI Models.
+                Our Bias Detection & Removal tool  enables data scientists and engineers by detecting and reducing bias in their data and AI Models.
+
             </p>
         </div>
         <div fxFlex.gt-sm="60%" fxLayoutAlign="center center"  style="margin-bottom: 1rem;">
@@ -59,31 +70,26 @@
             <img width="80%" src="../../assets/images/product-legal.png" alt="">
         </div>
         <div fxLayout="column" fxFlex.gt-sm="45%" fxLayoutAlign="center flex-start" class="product__container__legal__box">
-            <h2>Empower In House Legal Teams</h2>
+            <h2> Legal Compliance Auditing & Reporting </h2>
             <div class="product__container__legal__box__divider"></div>
             <p>
-                We empower in house Legal Teams by ensuring all AI models are interpretable, 
-                explainable and bias free. Our Legal Compliance Reporting 
-                tool arms legal entities with the information 
-                they need to ensure all technological innovation is regulatory compliant. 
+                Our Legal Compliance Reporting tool arms legal entities with the information they need to ensure all technological innovation is regulatory compliant. 
             </p>
         </div> 
     </section>
 
     <section fxLayout="row" fxLayoutAlign="center center" class="product__container__user">
         <div fxLayout="column" fxFlex.gt-sm="45%" fxLayoutAlign="center flex-start" class="product__container__user__box">
-            <h2>Create transparency for end users</h2>
+            <h2>Explainable AI</h2>
             <div class="product__container__user__box__divider"></div>
             <p>
-                We ensure that all end users understand the logic behind 
-                the outcome of an executed AI algorithm through the 
-                explainability of the AI models that have been audited.
+                Our XAI tool creates transparency between end users and AI by ensuring that the logic behind the outcome of an executed algorithm is explainable.
  
             </p>
 
         </div> 
         <div fxFlex.gt-sm="55%" fxLayoutAlign="center center"  style="margin-bottom: 1rem;">
-            <img width="80%" src="../../assets/images/product-user.png" alt="">
+            <img width="100%" src="../../assets/images/xai.png" alt="">
         </div>
     </section>
     </div>

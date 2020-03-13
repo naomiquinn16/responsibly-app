@@ -14,16 +14,14 @@
 
         &__introduction{
             width: 70vw;
+            margin-bottom:1.75rem;
+            @include small-screen {
+                margin-top: 9rem;
+            }
             @include extra-small-screen {
                 width: 85vw;
               }
-            margin-top: 5%;
-            @include small-screen {
-                margin-top: 10rem;
-            }
-            @include extra-small-screen {
-                margin-top: 10rem;
-            }
+           
             p{
                 line-height: 1.5rem;
                 color: map-get($colors, paragraphs);
@@ -64,7 +62,7 @@
 
         &__data, &__legal, &__user{
             width: 70vw;
-            margin: 6% 0;
+            margin: 5rem 0;
             &__box{
 
                 button{
@@ -85,11 +83,10 @@
         &__data, &__user {
             display: flex;
             @include extra-small-screen {
-                margin: 10rem 0 5rem;
                 flex-flow: row wrap-reverse;
               }
               @include small-screen {
-                margin: 10rem 0 5rem;
+                margin: 4rem 0 0;
                 flex-flow: row wrap-reverse;
               }
         }
