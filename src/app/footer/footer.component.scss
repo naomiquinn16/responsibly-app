@@ -11,13 +11,14 @@
         }
     }
     &__general{
+        padding: 1rem;
         background-color: black;
         min-height: 5rem;
 
         &__logo{
             margin-left: 1rem;
             font-weight: bold;
-            padding-top: 1rem;
+            
         }
 
         &__terms{
@@ -34,7 +35,6 @@
             justify-content: flex-end;
             margin-right: 1rem;
             font-size: .8rem;
-            padding-bottom: 1rem;
         }
 
         &__logo, &__terms, &__copyright{
