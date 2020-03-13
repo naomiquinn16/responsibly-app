@@ -15,9 +15,8 @@
         &__introduction{
             width: 70vw;
             margin-bottom:1.75rem;
-            @include small-screen {
-                margin-top: 9rem;
-            }
+            margin-top: 9rem;
+          
             @include extra-small-screen {
                 width: 85vw;
               }
