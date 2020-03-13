@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import {} from 'googlemaps';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('map',{static: true }) mapElement: any;
+  map: google.maps.Map;
   contactForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
@@ -33,8 +36,17 @@ export class ContactComponent implements OnInit {
     private router: Router,
   ) { }
 
-  ngOnInit() {
- 
+  ngOnInit(): void   {
+    const mapProperties = {
+      center: new google.maps.LatLng(53.3425, -6.2737),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    };
+    this.map = new google.maps.Map(this.mapElement.nativeElement,    mapProperties);
+    const marker = new google.maps.Marker({
+      position: mapProperties.center,
+      map: this.map,
+    });
   }
 
   onSubmit() {
