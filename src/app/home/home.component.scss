@@ -48,13 +48,10 @@
 
     &__landing {
       display: flex;
-      @include extra-small-screen {
-        margin: 10rem 0 5rem;
-        flex-flow: row wrap-reverse;
-      }
-      @include small-screen {
-        margin: 10rem 0 5rem;
-        flex-flow: row wrap-reverse;
+      flex-flow: row wrap-reverse;
+      margin: 10rem 0 5rem;
+      @include extra-large-screen {
+        margin: 20rem 0 5rem;
       }
     }
 
